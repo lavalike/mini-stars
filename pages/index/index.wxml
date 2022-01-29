@@ -1,0 +1,4 @@
+<!--index.wxml-->
+<view class="list-container" wx:for="{{pictures}}" wx:key="{{item}}">
+  <image class="index-header-picture" src="{{item}}" mode="aspectFill"/>
+</view>
