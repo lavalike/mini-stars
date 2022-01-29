@@ -2,3 +2,5 @@
 <view class="list-container" wx:for="{{pictures}}" wx:key="{{item}}">
   <image class="index-header-picture" src="{{item}}" mode="aspectFill"/>
 </view>
+
+<text class="index-footer-txt">-  爱你每一天  -</text>

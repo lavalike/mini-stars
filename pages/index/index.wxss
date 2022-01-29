@@ -7,3 +7,11 @@
   margin-bottom: 10px;
   border-radius: 10px;
 }
+
+.index-footer-txt {
+  display: block;
+  text-align: center;
+  color: #3b424c;
+  font-size: 14px;
+  padding-bottom: 50px;
+}
