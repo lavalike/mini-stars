@@ -16,4 +16,10 @@ Page({
   onLoad() {
 
   },
+
+  onShareAppMessage: function(){
+    return {
+      title: "清清日记"
+    }
+  }
 })
