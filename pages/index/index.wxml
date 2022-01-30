@@ -12,6 +12,12 @@
 
 <text class="footer-txt">- 爱你每一天 -</text>
 
-<view class="btn-publish" bindtap="onPublish">
+<!-- 登录按钮 -->
+<view class="btn-login" bindtap="onLogin" wx:if="{{!isLogin}}">
+  <image class="icon-login" src="../../res/images/ic_login_weixin.png" mode="aspectFill"/>
+</view>
+
+<!-- 发布按钮 -->
+<view class="btn-publish" bindtap="onPublish" wx:if="{{isLogin}}">
   <image class="icon-publish" src="../../res/images/publish.png" mode="aspectFill"/>
 </view>

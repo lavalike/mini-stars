@@ -1,17 +1,9 @@
 // app.js
 App({
   onLaunch() {
-    // 展示本地存储能力
-    const logs = wx.getStorageSync('logs') || []
-    logs.unshift(Date.now())
-    wx.setStorageSync('logs', logs)
-
-    // 登录
-    wx.login({
-      success: res => {
-        // 发送 res.code 到后台换取 openId, sessionKey, unionId
-      }
-    })
+    var Bmob = require('./utils/Bmob-2.2.51.min.js')
+    // Secret Key + API安全码
+    Bmob.initialize("1ca4f6d0908d5ecc", "880408")
   },
   globalData: {
     userInfo: null
