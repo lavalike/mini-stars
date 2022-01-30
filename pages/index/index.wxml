@@ -1,6 +1,17 @@
 <!--index.wxml-->
-<view class="list-container" wx:for="{{pictures}}" wx:key="{{item}}">
-  <image class="index-header-picture" src="{{item}}" mode="aspectFill"/>
-</view>
+<image class="header-picture" src="../../res/images/header.jpg" mode="aspectFill"/>
 
-<text class="index-footer-txt">-  爱你每一天  -</text>
+<block wx:if="{{empty}}">
+  <view class="empty-container">
+    <image class="empty-container-icon" src="../../res/images/ic_empty.png" mode="aspectFill"/>
+  </view>
+</block>
+<block wx:else>
+  <text>数据列表</text>
+</block>
+
+<text class="footer-txt">- 爱你每一天 -</text>
+
+<view class="btn-publish" bindtap="onPublish">
+  <image class="icon-publish" src="../../res/images/publish.png" mode="aspectFill"/>
+</view>

@@ -4,17 +4,17 @@ const app = getApp()
 
 Page({
   data: {
-    pictures: [
-      "../../res/images/one.jpg",
-      "../../res/images/two.jpg",
-      "../../res/images/three.jpg",
-      "../../res/images/four.jpg",
-      "../../res/images/five.jpg"
-    ]
+    empty: true
   },
 
   onLoad() {
 
+  },
+
+  onPublish: function(){
+    wx.showToast({
+      title: '正在开发',
+    })
   },
 
   onShareAppMessage: function(){
