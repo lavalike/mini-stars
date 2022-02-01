@@ -60,3 +60,35 @@
   width: 25px;
   height: 25px;
 }
+
+.diary-item-container {
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  border-color: #f18c1a;
+  border-style: solid;
+  border-width: 1px;
+}
+
+.diary-user-container {
+  height: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.diary-item-avatar {
+  width: 30px;
+  height: 30px;
+}
+
+.diary-item-nickname {
+  margin-left: 10px;
+  font-size: 20px;
+  color: #a0a4a9;
+}
+
+.diary-item-content {
+  display: block;
+  color: #3b424c;
+  font-size: 16px;
+}

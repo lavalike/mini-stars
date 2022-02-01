@@ -8,11 +8,26 @@ Page({
     nickname: null,
     avatar: null,
     isLogin: false,
-    empty: true
+    empty: true,
+    diaries: {}
   },
 
   onLoad() {
     this.initUser()
+    this.loadDiaries()
+  },
+
+  loadDiaries() {
+    const that = this
+    const query = Bmob.Query("diary")
+    query.find().then(res => {
+      if(res.length > 0){
+        that.setData({
+          empty: false,
+          diaries: res
+        })
+      }
+    })
   },
 
   initUser() {
@@ -27,7 +42,7 @@ Page({
     }
   },
 
-  onLogin(){
+  onLogin() {
     const that = this
     wx.getUserInfo({
       success: function (res) {
@@ -43,9 +58,25 @@ Page({
   },
 
   onPublish: function () {
+    // 检查是否验证过密码
+    wx.showModal({
+      title: "提示",
+      content: "检查发布专有密码",
+      success(res) {
+        if (res.confirm) {
+          wx.showToast({
+            title: '点击确定',
+          })
+        } else if (res.cancel) {
+          wx.showToast({
+            title: '点击取消',
+          })
+        }
+      }
+    })
+
     // 发布记录
     // 日期、昵称、头像、内容
-
   },
 
   send(nickname, avatar) {
