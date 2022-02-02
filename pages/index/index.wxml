@@ -7,12 +7,16 @@
   </view>
 </block>
 <block wx:else>
-  <view wx:for="{{diaries}}" wx:key="{{item}}">
+  <view wx:for="{{diaries}}" wx:key="item">
     <view class="diary-item-container">
       <view class="diary-user-container">
         <image class="diary-item-avatar" src="{{item.createUserAvatar}}" mode="aspectFill" />
-        <text class="diary-item-nickname">{{item.createUser}}</text>
+        <view class="diary-user-info-container">
+          <text class="diary-item-nickname">{{item.createUser}}</text>
+          <text class="diary-item-update-time">{{item.updatedAt}}</text>
+        </view>
       </view>
+
       <view class="diary-item-content">{{item.content}}</view>
     </view>
   </view>
